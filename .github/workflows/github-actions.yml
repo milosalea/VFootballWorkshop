@@ -1,12 +1,12 @@
-name: DEPLOY
-on:
-  push:
-    branches:
-    - main
+name: Workshop
+
+on: [push]
 
 jobs:
-  deploy:
-    runs-on: [self-hosted]
+  build:
+    runs-on: self-hosted
     steps:
-      - name: build docker
-      - run: docker-compose up -d
+    - uses: actions/checkout@v2
+    - name: Build & run
+      run:  ./start.sh 
+
