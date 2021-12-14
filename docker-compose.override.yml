@@ -9,5 +9,7 @@ services:
       - "80"
       - "443"
     volumes:
-      - ASPNETCORE_Kestrel__Certificates__Default__Password=44449222-cd0a-40a7-ab64-30debbe54848
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=test
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/VSoccerDemo.pfx
