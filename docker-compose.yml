@@ -1,8 +1,0 @@
-version: '3.4'
-
-services:
-  vsoccerdemo:
-    image: ${DOCKER_REGISTRY-}vsoccerdemo
-    build:
-      context: .
-      dockerfile: VSoccerDemo/Dockerfile
