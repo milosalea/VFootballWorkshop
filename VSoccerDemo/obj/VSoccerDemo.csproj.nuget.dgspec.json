@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Milos Bogdanovic\\Documents\\Workspace\\BankErp\\VSoccerDemoWorkshop\\VSoccerDemo\\VSoccerDemo.csproj": {}
+    "C:\\Users\\Milos Bogdanovic\\source\\repos\\VFootballWorkshop\\VSoccerDemo\\VSoccerDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Milos Bogdanovic\\Documents\\Workspace\\BankErp\\VSoccerDemoWorkshop\\VSoccerDemo\\VSoccerDemo.csproj": {
+    "C:\\Users\\Milos Bogdanovic\\source\\repos\\VFootballWorkshop\\VSoccerDemo\\VSoccerDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Milos Bogdanovic\\Documents\\Workspace\\BankErp\\VSoccerDemoWorkshop\\VSoccerDemo\\VSoccerDemo.csproj",
+        "projectUniqueName": "C:\\Users\\Milos Bogdanovic\\source\\repos\\VFootballWorkshop\\VSoccerDemo\\VSoccerDemo.csproj",
         "projectName": "VSoccerDemo",
-        "projectPath": "C:\\Users\\Milos Bogdanovic\\Documents\\Workspace\\BankErp\\VSoccerDemoWorkshop\\VSoccerDemo\\VSoccerDemo.csproj",
+        "projectPath": "C:\\Users\\Milos Bogdanovic\\source\\repos\\VFootballWorkshop\\VSoccerDemo\\VSoccerDemo.csproj",
         "packagesPath": "C:\\Users\\Milos Bogdanovic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Milos Bogdanovic\\Documents\\Workspace\\BankErp\\VSoccerDemoWorkshop\\VSoccerDemo\\obj\\",
+        "outputPath": "C:\\Users\\Milos Bogdanovic\\source\\repos\\VFootballWorkshop\\VSoccerDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
