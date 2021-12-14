@@ -6,10 +6,10 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
       - ASPNETCORE_Kestrel__Certificates__Default__Password=test
-      - ASPNETCORE_Kestrel__Certificates__Default__Path=/Https/VSoccerDemo.pfx
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/app/https/VSoccerDemoWorkshop.pfx
     ports:
-      - "80"
-      - "443"
+      - 80:80
+      - 443:443
     volumes:
-      - ./UserSecrets:/.microsoft/usersecrets:ro
-      - ./ASP.NET/Https:/https:ro
+      - ./UserSecrets:/app/.microsoft/usersecrets:ro
+      - ./ASP.NET/Https:/app/https:ro

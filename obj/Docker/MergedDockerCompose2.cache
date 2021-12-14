@@ -21,13 +21,13 @@ services:
     volumes:
     - type: bind
       source: ./UserSecrets
-      target: /app/.microsoft/usersecrets
+      target: /.microsoft/usersecrets
       read_only: true
       bind:
         create_host_path: true
     - type: bind
       source: ./ASP.NET/Https
-      target: /app/https
+      target: /https
       read_only: true
       bind:
         create_host_path: true

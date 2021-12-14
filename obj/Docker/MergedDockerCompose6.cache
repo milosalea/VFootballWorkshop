@@ -5,8 +5,8 @@ services:
       dockerfile: VSoccerDemo/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_Kestrel__Certificates__Default__Password: test
-      ASPNETCORE_Kestrel__Certificates__Default__Path: /Https/VSoccerDemo.pfx
+      ASPNETCORE_Kestrel__Certificates__Default__Password: localhost
+      ASPNETCORE_Kestrel__Certificates__Default__Path: /.aspnet/https/aspnetapp.pfx
       ASPNETCORE_URLS: https://+:443;http://+:80
     image: vsoccerdemo
     networks:
@@ -21,13 +21,13 @@ services:
     volumes:
     - type: bind
       source: ./UserSecrets
-      target: /app/.microsoft/usersecrets
+      target: /.microsoft/usersecrets
       read_only: true
       bind:
         create_host_path: true
     - type: bind
       source: ./ASP.NET/Https
-      target: /app/https
+      target: /https
       read_only: true
       bind:
         create_host_path: true
