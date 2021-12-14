@@ -10,5 +10,5 @@ jobs:
     - name: Build & run
       run: |
        pwd
-      #  docker-compose -f VFootballWorkshop/VFootballWorkshop/docker-compose.yaml up -d
+       docker-compose up -d
 
