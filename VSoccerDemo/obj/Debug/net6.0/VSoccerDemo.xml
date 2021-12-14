@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VSoccerDemo</name>
+    </assembly>
+    <members>
+        <member name="T:VSoccerDemo.BusinessLogic">
+            <summary>
+            Sadrzi biznis logiku aplikacije
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.BusinessLogic.random">
+            <summary>
+            Generator slucajnih brojeva
+            </summary>
+        </member>
+        <member name="F:VSoccerDemo.BusinessLogic._cache">
+            <summary>
+            Cache memorija, koristi se kao zamijena za bazu podataka
+            </summary>
+        </member>
+        <member name="M:VSoccerDemo.BusinessLogic.GetCurrentMatch">
+            <summary>
+            Izaberi match za trenutnu rundu
+            </summary>
+            <returns>Match model</returns>
+        </member>
+        <member name="M:VSoccerDemo.BusinessLogic.InsertTicket(VSoccerDemo.Models.Dto.TicketDto)">
+            <summary>
+            Uplata tiketa sa opkladama
+            </summary>
+            <param name="payInTicket"></param>
+            <returns>True ako je tiket uspjesno uplacen , False ako nije</returns>
+        </member>
+        <member name="M:VSoccerDemo.BusinessLogic.CalculateResult(System.String)">
+            <summary>
+            Kalkulacija rezultata i obrada dobitnih tiketa (opklada)
+            </summary>
+            <param name="payInOperator">Korisnik koji salje request</param>
+            <returns>Model sa podacima o rezultatu i visini dobitka</returns>
+        </member>
+        <member name="M:VSoccerDemo.Controllers.EventController.Get">
+            <summary>
+            Generise match sa kvotama
+            </summary>
+            <returns> Trenutni match sa kvotama za opkladu </returns>
+        </member>
+        <member name="M:VSoccerDemo.Controllers.EventController.Post(VSoccerDemo.Models.Dto.TicketDto)">
+            <summary>
+            Uplata tiketa na match
+            </summary>
+            <param name="value">Tiket sa opkladama i korisnikom koji salje request</param>
+            <returns>Da li je tiket uspjesno obradjen</returns>
+        </member>
+        <member name="M:VSoccerDemo.Controllers.EventController.GetResult(System.String)">
+            <summary>
+            Generise rezultat matcha i obradjuje uplacene tikete
+            </summary>
+            <param name="payInOperator">ID usera koji salje request</param>
+            <returns>Rezulat matcha sa dobitkom</returns>
+        </member>
+        <member name="T:VSoccerDemo.Enums.BetTypeEnum">
+            <summary>
+            Enum za provjeru rezultata matcha
+            </summary>
+        </member>
+        <member name="T:VSoccerDemo.Models.Dto.ResultDto">
+            <summary>
+            Model koji se vraca na frontend , sadrzi dobitak za igraca i rezultat matcha
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Dto.ResultDto.WinAmount">
+            <summary>
+            Dobitak igraca, ako je 0 onda je tiket ne dobitni
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Dto.ResultDto.HalfTimeHomeGoals">
+            <summary>
+            Broj golova na poluvremenu za domacina
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Dto.ResultDto.HalfTimeAwayGoals">
+            <summary>
+            Broj golova na poluvremenu za gosta
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Dto.ResultDto.FullTimeHomeGoals">
+            <summary>
+            Broj golova na kraju utakmice za domacina
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Dto.ResultDto.FullTimeAwayGoals">
+            <summary>
+            Broj golova na kraju utakmice za gosta
+            </summary>
+        </member>
+        <member name="T:VSoccerDemo.Models.Dto.TicketDto">
+            <summary>
+            Model koji dolazi sa frontenda , sadrzi broj matcha i uplate na match
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Dto.TicketDto.MatchId">
+            <summary>
+            Identifikacioni broj matcha
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Dto.TicketDto.BetIds">
+            <summary>
+            Odigrane opklade na match, sadrzi listu id-eva koji se provjeravaju iz cahce-a
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Dto.TicketDto.PayIn">
+            <summary>
+            Ukupna uplata na tiketu
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Dto.TicketDto.PayInOperator">
+            <summary>
+            Korisnik koji vrsi uplatu, jedinstveni string broj
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Match.Id">
+            <summary>
+            ID broj matcha
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Match.HomeTeamName">
+            <summary>
+            Naziv domaceg tima
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Match.AwayTeamName">
+            <summary>
+            Naziv tima koji gostuje
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Match.Stakes">
+            <summary>
+            Lista kvota
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Match.payInOperator">
+            <summary>
+            Korisnik koji vrsi uplatu tiketa i provjeru meca
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Stake.Id">
+            <summary>
+            ID kvote
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Stake.Name">
+            <summary>
+            Naziv kvote
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Stake.Type">
+            <summary>
+            Tip kvote
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Stake.Value">
+            <summary>
+            Vrijednost kvote
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Ticket.MatchID">
+            <summary>
+            ID trenutnog Matcha
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Ticket.StakeId">
+            <summary>
+            ID kvote u mecu
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Ticket.BetValue">
+            <summary>
+            Vrijednost kvote 
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.Ticket.PayIn">
+            <summary>
+            Uplata na kvotu
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.TicketValidation.MinPayIn">
+            <summary>
+            Minimalna Uplata na tiketu
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.TicketValidation.MaxPayIn">
+            <summary>
+            Maximalna uplata na tiketu
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.TicketValidation.MinNumberOfBetsOnTicket">
+            <summary>
+            Minimalni broj opklada na tiketu
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.TicketValidation.MaxNumberOfBetsOnTickets">
+            <summary>
+            Maximalan broj opklada na tiketu
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.TicketValidation.MinPayInPerItem">
+            <summary>
+            Minimalna uplata po opkladi
+            </summary>
+        </member>
+        <member name="P:VSoccerDemo.Models.TicketValidation.MaxPayInPerItem">
+            <summary>
+            Maximalna uplata po opkladi
+            </summary>
+        </member>
+    </members>
+</doc>

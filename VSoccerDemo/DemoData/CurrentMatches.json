@@ -1,0 +1,217 @@
+[
+  {
+    "Id": 1,
+    "HomeTeamName": "Osijek",
+    "AwayTeamName": "Crvena Zvezda",
+    "Stakes": [
+      {
+        "Id": 1,
+        "Name": "HalfTimeHomeWin",
+        "Type": "1",
+        "Value": 5.2
+      },
+      {
+        "Id": 2,
+        "Name": "HalfTimeDraw",
+        "Type": "X",
+        "Value": 2.95
+      },
+      {
+        "Id": 3,
+        "Name": "HalfTimeAwayWin",
+        "Type": "2",
+        "Value": 1.75
+      },
+      {
+        "Id": 4,
+        "Name": "FullTimeHomeWin",
+        "Type": "1",
+        "Value": 5.25
+      },
+      {
+        "Id": 5,
+        "Name": "FullTimeDraw",
+        "Type": "X",
+        "Value": 5
+      },
+      {
+        "Id": 6,
+        "Name": "FullTimeAwayWin",
+        "Type": "2",
+        "Value": 1.45
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "HomeTeamName": "Partizan",
+    "AwayTeamName": "Buducnost",
+    "Stakes": [
+      {
+        "Id": 1,
+        "Name": "HalfTimeHomeWin",
+        "Type": "1",
+        "Value": 1.75
+      },
+      {
+        "Id": 2,
+        "Name": "HalfTimeDraw",
+        "Type": "X",
+        "Value": 2.95
+      },
+      {
+        "Id": 3,
+        "Name": "HalfTimeAwayWin",
+        "Type": "2",
+        "Value": 5.2
+      },
+      {
+        "Id": 4,
+        "Name": "FullTimeHomeWin",
+        "Type": "1",
+        "Value": 1.45
+      },
+      {
+        "Id": 5,
+        "Name": "FullTimeDraw",
+        "Type": "X",
+        "Value": 5
+      },
+      {
+        "Id": 6,
+        "Name": "FullTimeAwayWin",
+        "Type": "2",
+        "Value": 5.25
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "HomeTeamName": "Sarajevo",
+    "AwayTeamName": "Vojvodina",
+    "Stakes": [
+      {
+        "Id": 1,
+        "Name": "HalfTimeHomeWin",
+        "Type": "1",
+        "Value": 2.12
+      },
+      {
+        "Id": 2,
+        "Name": "HalfTimeDraw",
+        "Type": "X",
+        "Value": 2.6
+      },
+      {
+        "Id": 3,
+        "Name": "HalfTimeAwayWin",
+        "Type": "2",
+        "Value": 4.05
+      },
+      {
+        "Id": 4,
+        "Name": "FullTimeHomeWin",
+        "Type": "1",
+        "Value": 1.65
+      },
+      {
+        "Id": 5,
+        "Name": "FullTimeDraw",
+        "Type": "X",
+        "Value": 4.3
+      },
+      {
+        "Id": 6,
+        "Name": "FullTimeAwayWin",
+        "Type": "2",
+        "Value": 4.15
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "HomeTeamName": "Borac",
+    "AwayTeamName": "Zrinjski",
+    "Stakes": [
+      {
+        "Id": 1,
+        "Name": "HalfTimeHomeWin",
+        "Type": "1",
+        "Value": 2.8
+      },
+      {
+        "Id": 2,
+        "Name": "HalfTimeDraw",
+        "Type": "X",
+        "Value": 1.9
+      },
+      {
+        "Id": 3,
+        "Name": "HalfTimeAwayWin",
+        "Type": "2",
+        "Value": 4.6
+      },
+      {
+        "Id": 4,
+        "Name": "FullTimeHomeWin",
+        "Type": "1",
+        "Value": 2
+      },
+      {
+        "Id": 5,
+        "Name": "FullTimeDraw",
+        "Type": "X",
+        "Value": 3.05
+      },
+      {
+        "Id": 6,
+        "Name": "FullTimeAwayWin",
+        "Type": "2",
+        "Value": 4
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "HomeTeamName": "Hajduk",
+    "AwayTeamName": "Radnicki",
+    "Stakes": [
+      {
+        "Id": 1,
+        "Name": "HalfTimeHomeWin",
+        "Type": "1",
+        "Value": 2.62
+      },
+      {
+        "Id": 2,
+        "Name": "HalfTimeDraw",
+        "Type": "X",
+        "Value": 2.08
+      },
+      {
+        "Id": 3,
+        "Name": "HalfTimeAwayWin",
+        "Type": "2",
+        "Value": 4.2
+      },
+      {
+        "Id": 4,
+        "Name": "FullTimeHomeWin",
+        "Type": "1",
+        "Value": 1.9
+      },
+      {
+        "Id": 5,
+        "Name": "FullTimeDraw",
+        "Type": "X",
+        "Value": 3.3
+      },
+      {
+        "Id": 6,
+        "Name": "FullTimeAwayWin",
+        "Type": "2",
+        "Value": 4
+      }
+    ]
+  }
+]
