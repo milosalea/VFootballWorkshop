@@ -1,0 +1,16 @@
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\VSoccerDemo.deps.json
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\VSoccerDemo.runtimeconfig.json
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\appsettings.Development.json
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\appsettings.json
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\DemoData\CurrentMatches.json
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\VSoccerDemo.exe
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\VSoccerDemo.dll
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\Microsoft.OpenApi.dll
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\VSoccerDemo.pdb
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\bin\Debug\VSoccerDemo.xml
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\obj\Debug\docker-compose.dcproj.CopyComplete
