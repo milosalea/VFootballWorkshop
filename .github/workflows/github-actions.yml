@@ -10,5 +10,5 @@ jobs:
     - name: Build & run
       run: |
        pwd
-       docker-compose up -d
+       docker-compose build 
 
