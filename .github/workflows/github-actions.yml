@@ -8,5 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build & run
-      run: docker-compose -f VFootballWorkshop/VFootballWorkshop/docker-compose.yaml up -d
+      run: |
+       pwd
+      #  docker-compose -f VFootballWorkshop/VFootballWorkshop/docker-compose.yaml up -d
 
