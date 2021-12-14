@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, linux, ARM64]
+    runs-on: [self-hosted]
     steps:
       - name: build docker
       - run: docker-compose up -d
