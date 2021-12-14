@@ -1,0 +1,12 @@
+name: DEPLOY
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, linux, ARM64]
+    steps:
+      - name: build docker
+      - run: docker-compose up -d
