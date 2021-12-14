@@ -86,4 +86,3 @@ C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\VSoccerDemo\obj\Debug\n
 C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.xml
 C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.pdb
 C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.genruntimeconfig.cache
-C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.csproj.AssemblyReference.cache
