@@ -109,16 +109,17 @@ namespace VSoccerDemo
             string user = payInOperator;
 
             //TODO: 3. Generisati rezultate za Full Time i Part Time, koristiti postojecu instancu random 
-            int homeTeamRandom = 0;
-            int awayTeamRandom = 0;
+            //int homeTeamRandom = random.Next(10);
+            //int awayTeamRandom = random.Next(10); ;
 
+            var homeHalfTimeGoals = random.Next(3);
+            var awayHalfTimeGoals = random.Next(3);
             //Generisanje golova za domaci tim
-            var homeFullTimeGoals = 0;
+            var homeFullTimeGoals = homeHalfTimeGoals + random.Next(5);
             //Generisanje rezultata za gosta
-            var awayFullTimeGoals = 0;
+            var awayFullTimeGoals = awayHalfTimeGoals + random.Next(5);
 
-            var homeHalfTimeGoals = 0;
-            var awayHalfTimeGoals = 0;
+            
 
             //Pokupi sve odigrane tikete iz cache-a za trenutni match 
             List<Ticket> betsOnMatch = _cache.Get<List<Ticket>>("bets" + user) ?? new List<Ticket>();
@@ -130,6 +131,55 @@ namespace VSoccerDemo
                 //TODO: 4. U Switchu provjeriti da li je opklada dobitna koristeci BetTypeEnum i golove za domacina/gosta , ako je dobitan setovati is win na true.
                 switch (bet.StakeId)
                 {
+                    case (int)BetTypeEnum.HalfTimeHomeWin: {
+                            if (homeHalfTimeGoals > awayHalfTimeGoals)
+                            {
+                                isWin = true;
+                            }
+                            return null; 
+                    }
+
+                    case (int)BetTypeEnum.HalfTimeDraw:{
+                            if (homeHalfTimeGoals == awayHalfTimeGoals)
+                            {
+                                isWin = true;
+                            }
+                            return null;
+                        }
+
+                    case (int)BetTypeEnum.HalfTimeAwayWin:{
+                            if (homeHalfTimeGoals < awayHalfTimeGoals)
+                            {
+                                isWin = true;
+                            }
+                            return null;
+                        }
+
+                    case (int)BetTypeEnum.FullTimeHomeWin:
+                        {
+                            if (homeFullTimeGoals > awayFullTimeGoals)
+                            {
+                                isWin = true;
+                            }
+                            return null;
+                        }
+                    case (int)BetTypeEnum.FullTimeDraw:
+                        {
+                            if (homeFullTimeGoals == awayFullTimeGoals)
+                            {
+                                isWin = true;
+                            }
+                            return null;
+                        }
+                    case (int)BetTypeEnum.FullTimeAwayWin:
+                        {
+                            if (homeFullTimeGoals < awayFullTimeGoals)
+                            {
+                                isWin = true;
+                            }
+                            return null;
+                        }
+
 
                 }
 
