@@ -129,7 +129,7 @@ namespace VSoccerDemo
             int homeTeamRandom = 0;
             int awayTeamRandom = 0;
 
-            //Task 3
+           
             
 
             //Generisanje golova za domaci tim
@@ -139,6 +139,30 @@ namespace VSoccerDemo
 
             var homeHalfTimeGoals = 0;
             var awayHalfTimeGoals = 0;
+
+            //Task 3
+            homeFullTimeGoals = random.Next(0,8);
+            awayFullTimeGoals = random.Next(0,8);
+
+            // homeHalfTimeGoals = random.Next(homeFullTimeGoals);
+            //awayHalfTimeGoals = random.Next(awayFullTimeGoals);
+
+            homeHalfTimeGoals = random.Next(0, 8);
+            awayHalfTimeGoals = random.Next(0, 8);
+            
+            while(homeHalfTimeGoals > homeFullTimeGoals)
+            {
+                homeHalfTimeGoals = random.Next(0, 8);
+            }
+
+            while(awayHalfTimeGoals < awayFullTimeGoals)
+            {
+                awayHalfTimeGoals = random.Next(0, 8);
+
+            }
+
+
+
 
             //Pokupi sve odigrane tikete iz cache-a za trenutni match 
             List<Ticket> betsOnMatch = _cache.Get<List<Ticket>>("bets" + user) ?? new List<Ticket>();
