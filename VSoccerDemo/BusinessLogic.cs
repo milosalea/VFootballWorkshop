@@ -72,32 +72,43 @@ namespace VSoccerDemo
             //TODO: 1.1 Provjera na tiketu za minimalnu i maximalnu uplatu
             //TODO: 1.2 Provjera za minimalan i maximalan broj tiketa
             //TODO: 1.3 Provjera po opkladi za minimalnu i maximalnu uplatu
-
-            //Uzeti trenutan match iz cache-a
-            Match? currentMatch = _cache.Get<Match>("CurrentMatch" + user);
-            if(currentMatch != null)
+            Boolean validTicket = false;
+            if (payInTicket.PayIn >= validationModel.MinPayIn && payInTicket.PayIn <= validationModel.MaxPayIn)
             {
-                var ticketCount = payInTicket.BetIds.Count();
-                // Uplata na tiketu po opkladi
-                decimal payInPerBet = payInTicket.PayIn / ticketCount;
-                foreach (int betId in payInTicket.BetIds)
+                //uplata je okej
+                if (payInTicket.BetIds.Count() >= validationModel.MinNumberOfBetsOnTicket && payInTicket.BetIds.Count() <= validationModel.MaxNumberOfBetsOnTickets)
                 {
-                    //TODO: 2 Pronaci kvotu iz match modela po Id-u
-                    //TODO: 2.1 Napraviti novi Ticket Model i popuniti sa podacima 
-                    //TODO: 2.2 Dodati novu opkladu za korisnika u _cache-u za trenutni match sa kljucem bets + user
-                    Stake currentStake = currentMatch.Stakes[betId];
-                    Ticket newTicket = new Ticket();
-                    newTicket.Id = Guid.NewGuid();
-                    newTicket.MatchID = currentMatch.Id;
-                    newTicket.StakeId = betId;
-                    newTicket.BetValue = currentStake.Value;
-                    newTicket.PayIn = payInPerBet;
-                    _cache.Set("bets" + user, newTicket);
-
+                    //broj tiketa je okej
+                    decimal average = (payInTicket.PayIn / payInTicket.BetIds.Count());
+                    if (average >= validationModel.MinPayInPerItem && average <= validationModel.MaxPayInPerItem)
+                        validTicket = true;
                 }
-                return true;
+
+
             }
-            return false;
+
+
+
+            if (validTicket)
+            {
+                //Uzeti trenutan match iz cache-a
+                Match? currentMatch = _cache.Get<Match>("CurrentMatch" + user);
+                if (currentMatch != null)
+                {
+                    var ticketCount = payInTicket.BetIds.Count();
+                    // Uplata na tiketu po opkladi
+                    decimal payInPerBet = payInTicket.PayIn / ticketCount;
+                    foreach (int betId in payInTicket.BetIds)
+                    {
+                        //TODO: 2 Pronaci kvotu iz match modela po Id-u
+                        //TODO: 2.1 Napraviti novi Ticket Model i popuniti sa podacima 
+                        //TODO: 2.2 Dodati novu opkladu za korisnika u _cache-u za trenutni match sa kljucem bets + user
+                    }
+                    return true;
+                }
+                return false;
+            }
+            else return false;
         }
 
         /// <summary>
@@ -110,16 +121,17 @@ namespace VSoccerDemo
             string user = payInOperator;
 
             //TODO: 3. Generisati rezultate za Full Time i Part Time, koristiti postojecu instancu random 
+
             int homeTeamRandom = 0;
             int awayTeamRandom = 0;
 
             //Generisanje golova za domaci tim
-            var homeFullTimeGoals = 0;
+            var homeFullTimeGoals = random.Next(5);
             //Generisanje rezultata za gosta
-            var awayFullTimeGoals = 0;
+            var awayFullTimeGoals = random.Next(5);
 
-            var homeHalfTimeGoals = 0;
-            var awayHalfTimeGoals = 0;
+            var homeHalfTimeGoals = homeFullTimeGoals - random.Next(homeFullTimeGoals);
+            var awayHalfTimeGoals = awayFullTimeGoals - random.Next(awayFullTimeGoals);
 
             //Pokupi sve odigrane tikete iz cache-a za trenutni match 
             List<Ticket> betsOnMatch = _cache.Get<List<Ticket>>("bets" + user) ?? new List<Ticket>();
@@ -129,9 +141,26 @@ namespace VSoccerDemo
             {
                 bool isWin = false;
                 //TODO: 4. U Switchu provjeriti da li je opklada dobitna koristeci BetTypeEnum i golove za domacina/gosta , ako je dobitan setovati is win na true.
-                switch (bet.StakeId) 
+                switch (bet.StakeId)
                 {
-
+                    case (int)BetTypeEnum.HalfTimeHomeWin:
+                        if (homeHalfTimeGoals > awayHalfTimeGoals) isWin = true;
+                        break;
+                    case (int)BetTypeEnum.HalfTimeDraw:
+                        if (homeHalfTimeGoals == awayHalfTimeGoals) isWin = true;
+                        break;
+                    case (int)BetTypeEnum.HalfTimeAwayWin:
+                        if (awayHalfTimeGoals > homeHalfTimeGoals) isWin = true;
+                        break;
+                    case (int)BetTypeEnum.FullTimeHomeWin:
+                        if (homeFullTimeGoals > awayFullTimeGoals) isWin = true;
+                        break;
+                    case (int)BetTypeEnum.FullTimeDraw:
+                        if (homeFullTimeGoals == awayFullTimeGoals) isWin = true;
+                        break;
+                    case (int)BetTypeEnum.FullTimeAwayWin:
+                        if (awayFullTimeGoals > homeFullTimeGoals) isWin = true;
+                        break;
                 }
 
                 if (isWin)
