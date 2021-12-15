@@ -1,6 +1,8 @@
 name: Workshop
 
 on: [push]
+  branches:
+    - teamB
 
 jobs:
   build:
