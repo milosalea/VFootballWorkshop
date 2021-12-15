@@ -73,6 +73,8 @@ namespace VSoccerDemo
             //TODO: 1.2 Provjera za minimalan i maximalan broj tiketa
             //TODO: 1.3 Provjera po opkladi za minimalnu i maximalnu uplatu
 
+
+
             //Uzeti trenutan match iz cache-a
             Match? currentMatch = _cache.Get<Match>("CurrentMatch" + user);
             if(currentMatch != null)
@@ -85,6 +87,19 @@ namespace VSoccerDemo
                     //TODO: 2 Pronaci kvotu iz match modela po Id-u
                     //TODO: 2.1 Napraviti novi Ticket Model i popuniti sa podacima 
                     //TODO: 2.2 Dodati novu opkladu za korisnika u _cache-u za trenutni match sa kljucem bets + user
+
+                    Ticket newTicket=new Ticket();
+                    Stake stake = currentMatch.Stakes[betId];
+                    newTicket.Id=Guid.NewGuid();
+                    newTicket.MatchID = betId;
+                    newTicket.PayIn = payInPerBet;
+                    newTicket.StakeId = stake.Id;
+                    newTicket.BetValue = stake.Value;
+
+                         _cache.Set("bets" + user, newTicket);
+
+
+
                 }
                 return true;
             }
@@ -122,6 +137,33 @@ namespace VSoccerDemo
                 //TODO: 4. U Switchu provjeriti da li je opklada dobitna koristeci BetTypeEnum i golove za domacina/gosta , ako je dobitan setovati is win na true.
                 switch (bet.StakeId) 
                 {
+                    case  ((int)BetTypeEnum.FullTimeAwayWin):
+                        if(homeFullTimeGoals<awayFullTimeGoals)
+                            isWin = true;
+                        break;
+                    case ((int)BetTypeEnum.HalfTimeAwayWin):
+                        if (homeHalfTimeGoals < awayHalfTimeGoals)
+                            isWin = true;
+                        break;
+                    case ((int)BetTypeEnum.FullTimeHomeWin):
+                        if (homeFullTimeGoals > awayFullTimeGoals)
+                            isWin = true;
+                        break;
+                    case ((int)BetTypeEnum.HalfTimeHomeWin):
+                        if (homeHalfTimeGoals > awayHalfTimeGoals)
+                            isWin = true;
+                        break;
+                    case ((int)BetTypeEnum.FullTimeDraw):
+                        if (homeFullTimeGoals== awayFullTimeGoals)
+                            isWin = true;
+                        break;
+                    case ((int)BetTypeEnum.HalfTimeDraw):
+                        if (homeHalfTimeGoals == awayHalfTimeGoals)
+                            isWin = true;
+                        break;
+                    default:
+                        isWin = false;
+                        break;
 
                 }
 
