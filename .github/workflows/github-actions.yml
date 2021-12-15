@@ -1,12 +1,13 @@
 name: Workshop
 
-on: [push]
-  branches:
-    - teamB
+on:
+  push:
+    branches:
+      - teamB
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: linux
     steps:
     - uses: actions/checkout@v2
     - name: Build & run
