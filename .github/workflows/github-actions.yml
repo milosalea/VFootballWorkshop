@@ -1,6 +1,8 @@
 name: Workshop
 
 on: [push]
+  branches:
+    - teamA
 
 jobs:
   build:
@@ -8,5 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build & run
-      run:  ./start.sh 
-
+      run:  ./start.sh
