@@ -75,7 +75,7 @@ namespace VSoccerDemo
 
             //Uzeti trenutan match iz cache-a
             Match? currentMatch = _cache.Get<Match>("CurrentMatch" + user);
-            if(currentMatch != null)
+            if (currentMatch != null)
             {
                 var ticketCount = payInTicket.BetIds.Count();
                 // Uplata na tiketu po opkladi
@@ -85,6 +85,14 @@ namespace VSoccerDemo
                     //TODO: 2 Pronaci kvotu iz match modela po Id-u
                     //TODO: 2.1 Napraviti novi Ticket Model i popuniti sa podacima 
                     //TODO: 2.2 Dodati novu opkladu za korisnika u _cache-u za trenutni match sa kljucem bets + user
+                    Stake currentStake = currentMatch.Stakes[betId];
+                    Ticket newTicket = new Ticket();
+                    newTicket.Id = Guid.NewGuid();
+                    newTicket.MatchID = currentMatch.Id;
+                    newTicket.StakeId = betId;
+                    newTicket.BetValue = currentStake.Value;
+                    newTicket.PayIn = payInPerBet;
+                    _cache.Set("bets" + user, newTicket);
                 }
                 return true;
             }
@@ -120,7 +128,7 @@ namespace VSoccerDemo
             {
                 bool isWin = false;
                 //TODO: 4. U Switchu provjeriti da li je opklada dobitna koristeci BetTypeEnum i golove za domacina/gosta , ako je dobitan setovati is win na true.
-                switch (bet.StakeId) 
+                switch (bet.StakeId)
                 {
 
                 }
