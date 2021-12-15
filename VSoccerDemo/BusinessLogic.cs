@@ -73,6 +73,29 @@ namespace VSoccerDemo
             //TODO: 1.2 Provjera za minimalan i maximalan broj tiketa
             //TODO: 1.3 Provjera po opkladi za minimalnu i maximalnu uplatu
 
+            //if((payInTicket.MatchId / payInTicket.BetIds) ==)
+
+            //1.1 task
+            if ((payInTicket.PayIn >= validationModel.MinPayIn) && (payInTicket.PayIn <= validationModel.MaxPayIn)){
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+            //1.2 task
+            if( (payInTicket.MatchId >= validationModel.MinNumberOfBetsOnTicket) && (payInTicket.MatchId <= validationModel.MaxNumberOfBetsOnTickets))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+
 
 
             //Uzeti trenutan match iz cache-a
@@ -118,6 +141,9 @@ namespace VSoccerDemo
             //TODO: 3. Generisati rezultate za Full Time i Part Time, koristiti postojecu instancu random 
             int homeTeamRandom = 0;
             int awayTeamRandom = 0;
+
+            //Task 3
+            
 
             //Generisanje golova za domaci tim
             var homeFullTimeGoals = 0;
