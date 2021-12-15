@@ -295,23 +295,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Milos Bogdanovic\\.nuget\\packages\\": {},
+    "C:\\Users\\student\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Milos Bogdanovic\\source\\repos\\VFootballWorkshop\\VSoccerDemo\\VSoccerDemo.csproj",
+      "projectUniqueName": "C:\\Users\\student\\Desktop\\Bosko Gogic Alea Partners\\VFootballWorkshop\\VSoccerDemo\\VSoccerDemo.csproj",
       "projectName": "VSoccerDemo",
-      "projectPath": "C:\\Users\\Milos Bogdanovic\\source\\repos\\VFootballWorkshop\\VSoccerDemo\\VSoccerDemo.csproj",
-      "packagesPath": "C:\\Users\\Milos Bogdanovic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Milos Bogdanovic\\source\\repos\\VFootballWorkshop\\VSoccerDemo\\obj\\",
+      "projectPath": "C:\\Users\\student\\Desktop\\Bosko Gogic Alea Partners\\VFootballWorkshop\\VSoccerDemo\\VSoccerDemo.csproj",
+      "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\student\\Desktop\\Bosko Gogic Alea Partners\\VFootballWorkshop\\VSoccerDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Milos Bogdanovic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\student\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -364,7 +364,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

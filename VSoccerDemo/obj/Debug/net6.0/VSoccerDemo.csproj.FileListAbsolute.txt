@@ -86,3 +86,33 @@ C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\VSoccerDemo\obj\Debug\n
 C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.xml
 C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.pdb
 C:\Users\Milos Bogdanovic\source\repos\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.genruntimeconfig.cache
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.xml
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.pdb
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\appsettings.json
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\DemoData\CurrentMatches.json
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\VSoccerDemo.exe
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\VSoccerDemo.deps.json
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\VSoccerDemo.runtimeconfig.json
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\VSoccerDemo.dll
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\ref\VSoccerDemo.dll
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\VSoccerDemo.pdb
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\VSoccerDemo.xml
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.csproj.AssemblyReference.cache
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.AssemblyInfoInputs.cache
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.AssemblyInfo.cs
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\scopedcss\bundle\VSoccerDemo.styles.css
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.csproj.CopyComplete
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.dll
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\ref\VSoccerDemo.dll
+C:\Users\student\Desktop\Bosko Gogic Alea Partners\VFootballWorkshop\VSoccerDemo\obj\Debug\net6.0\VSoccerDemo.genruntimeconfig.cache
