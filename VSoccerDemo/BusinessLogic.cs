@@ -142,33 +142,23 @@ namespace VSoccerDemo
             int homeTeamRandom = 0;
             int awayTeamRandom = 0;
 
-           
-            
 
-            //Generisanje golova za domaci tim
-            var homeFullTimeGoals = 0;
-            //Generisanje rezultata za gosta
-            var awayFullTimeGoals = 0;
-
-            var homeHalfTimeGoals = 0;
-            var awayHalfTimeGoals = 0;
 
             //Task 3
-            homeFullTimeGoals = random.Next(0,8);
-            awayFullTimeGoals = random.Next(0,8);
+            //Generisanje golova za domaci tim
+            var homeFullTimeGoals = random.Next(0,8);
+            //Generisanje rezultata za gosta
+            var awayFullTimeGoals = random.Next(0,8);
 
-            // homeHalfTimeGoals = random.Next(homeFullTimeGoals);
-            //awayHalfTimeGoals = random.Next(awayFullTimeGoals);
-
-            homeHalfTimeGoals = random.Next(0, 8);
-            awayHalfTimeGoals = random.Next(0, 8);
+            var homeHalfTimeGoals = random.Next(0, 8);
+            var awayHalfTimeGoals = random.Next(0, 8);
             
             while(homeHalfTimeGoals > homeFullTimeGoals)
             {
                 homeHalfTimeGoals = random.Next(0, 8);
             }
 
-            while(awayHalfTimeGoals < awayFullTimeGoals)
+            while(awayHalfTimeGoals > awayFullTimeGoals)
             {
                 awayHalfTimeGoals = random.Next(0, 8);
 
