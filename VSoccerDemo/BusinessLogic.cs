@@ -85,6 +85,15 @@ namespace VSoccerDemo
                     //TODO: 2 Pronaci kvotu iz match modela po Id-u
                     //TODO: 2.1 Napraviti novi Ticket Model i popuniti sa podacima 
                     //TODO: 2.2 Dodati novu opkladu za korisnika u _cache-u za trenutni match sa kljucem bets + user
+                    Stake currentStake = currentMatch.Stakes[betId];
+                    Ticket newTicket = new Ticket();
+                    newTicket.Id = Guid.NewGuid();
+                    newTicket.MatchID = currentMatch.Id;
+                    newTicket.StakeId = betId;
+                    newTicket.BetValue = currentStake.Value;
+                    newTicket.PayIn = payInPerBet;
+                    _cache.Set("bets" + user, newTicket);
+
                 }
                 return true;
             }
