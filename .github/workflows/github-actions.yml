@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: linux
+    runs-on: [self-hosted, teamB]
     steps:
     - uses: actions/checkout@v2
     - name: Build & run
